@@ -1,0 +1,21 @@
+
+.menu{
+    padding: 20px 0px;
+}
+
+.menu .btn-nav{
+background-color: var(--color-btn);
+color: var(--color-btn-text) ;
+padding: 8px 16px;
+border-radius: 20px;
+border: none;
+transition: all 0.2s;
+font-size: 1rem;
+font-weight: 600;
+margin: 0 7px;
+}
+
+.menu .btn-nav:hover{
+background-color : var(--color-btn-hover);
+color: var(--color-btn-text-hover) ;
+}

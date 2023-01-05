@@ -1,0 +1,29 @@
+.filter .btn-flutuante{
+    position: relative;
+    display: inline;
+
+}
+
+.filter .btn-flutuante .bnt-action{
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px
+}
+
+.filter .div-flutuante{
+    position: absolute;
+    width: 200px;
+    min-height: 200px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: brown;
+}
+
+.filter .div-flutuante.aberto{
+    display: flex;
+}
+
+
