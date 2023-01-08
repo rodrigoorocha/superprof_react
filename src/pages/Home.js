@@ -5,6 +5,7 @@ const Home = () => {
  return(
     <div>
        <Filter></Filter>
+       
        {/* <img className="img-centraliza" src="/images/superprof.svg"/>
        <img className="img-centraliza" src="/images/superprof.svg"/> */}
     </div>
