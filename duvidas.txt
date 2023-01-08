@@ -1,0 +1,50 @@
+pq pegou esse min bootstrap
+
+export vs export default
+
+commonjs vs module pq quando importo um componente, não preciso botar o .js no final?
+
+precisa tirar o container no nav
+
+
+
+qual a diferença
+*****************************************************
+const handleBtn = (btn) => {
+    let btnAntes = btnAction
+    let valor = !btnAction[btn]
+
+    btnAntes.face = false;
+    btnAntes.nativo = false
+
+    btnAntes[btn] = valor
+    setBtnAction({ ...btnAntes })
+  }
+
+  const handleBtndf = (btn) => {
+    setBtnAction((btnPrev) => ({
+      face: false,
+      nativo: false,
+      [btn]: !btnPrev[btn]
+    }))
+  }const handleBtn = (btn) => {
+    let btnAntes = btnAction
+    let valor = !btnAction[btn]
+
+    btnAntes.face = false;
+    btnAntes.nativo = false
+
+    btnAntes[btn] = valor
+    setBtnAction({ ...btnAntes })
+  }
+
+  const handleBtndf = (btn) => {
+    setBtnAction((btnPrev) => ({
+      face: false,
+      nativo: false,
+      [btn]: !btnPrev[btn]
+    }))
+  }
+  *********************************************
+
+  pq nao usar o bootstrap-react (https://react-bootstrap.github.io/getting-started/introduction/)
