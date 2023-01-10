@@ -9,21 +9,87 @@
     color: white;
     border: none;
     border-radius: 5px;
-    padding: 5px 10px
+    padding: 5px 10px;
+    margin: 0 5px
 }
 
 .filter .div-flutuante{
     position: absolute;
-    width: 200px;
+    min-width: 200px;
     min-height: 200px;
     display: none;
-    justify-content: center;
-    align-items: center;
-    background-color: brown;
+    background-color: rgb(255, 255, 255);
+    top: 30px;
+    left: 0;
+    box-shadow: 3px 6px 14px #ccc;
 }
 
 .filter .div-flutuante.aberto{
+    display: block;
+}
+
+.filter .aba-face{
+    width: 200px;
     display: flex;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px ;
 }
 
 
+.filter .aba-nativo{
+    padding: 30px 10px 0;
+    position: relative;
+    height: 200px;
+    
+
+}
+.filter .aba-nativo button{
+    border: none !important;
+    position: absolute;
+    bottom: 0px;
+    right: 10px;
+
+    
+
+}
+.filter .aba-nativo button:hover{
+    background: transparent !important;
+    color:#157dfe !important
+    
+
+    
+
+}
+
+
+.filter .online,
+.filter .face{
+    filter: grayscale(1);
+    margin:  10px;
+    height: 50px;
+    width: 50px;
+    background-repeat:  no-repeat;
+
+}
+
+.filter .online{
+    
+    background-image: url(https://c.superprof.com/style/images/search/filters/i_move.svg)
+}
+
+.filter .face{
+   
+    background-image: url(https://c.superprof.com/style/images/search/filters/at_my_place.svg)
+}
+.filter .online.check,
+.filter .face.check{
+    filter: grayscale(0);
+}
+
+.filter .aba-preco{
+    height: 240px;
+    width: 300px;
+    padding: 25px;
+}

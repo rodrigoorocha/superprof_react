@@ -1,29 +1,40 @@
 import { useState } from "react";
 import "./Filter.css"
 
+
 const Filter = () => {
+    const [valorHora, setValorHora] = useState(0)
+    const [valorMedio, setValorMedio] = useState(0)
+    const [filteOnline, setfilteOnline] = useState(false)
+    const [btnAction, setBtnAction] = useState({
+        face: false,
+        nativo: false,
+        precos: false,
+        tempresp: false,
+        nivel: false,
 
-const [btnAction, setBtnAction] = useState({
-    face: false,
-    nativo : false,
-    precos : false,
-    tempresp : false,
-    nivel : false,       
+    })
 
-})
 
-const handleBtn= (btn) =>{ 
+    const handleBtn = async (btn) => {
+        let keys = Object.keys(btnAction)
+        let btns = btnAction
+        let valor = !btnAction[btn]
 
-    let btnAntes = btnAction
-    let valor = !btnAction[btn]
 
-    btnAntes.face = false;
-    btnAntes.nativo = false
 
-    btnAntes[btn] =valor
-    setBtnAction({...btnAntes})
+        await keys.forEach((index) => {
+            btns[index] = false
+        })
 
-}
+
+
+        setBtnAction({
+            ...btns,
+            [btn]: valor
+        })
+
+    }
 
     return (
         <>
@@ -33,34 +44,58 @@ const handleBtn= (btn) =>{
                     <div className="row">
                         <div className="col text-start">
                             <div className="btn-flutuante">
-                                <button className="bnt-action" onClick={()=> handleBtn("face")}>Face a face</button>
+                                <button className="bnt-action" onClick={() => handleBtn("face")}>Face a face</button>
                                 <div className={btnAction.face === false ? "div-flutuante" : "div-flutuante aberto"}>
-                                    <h2>face a face</h2>
-                                    <h2>online</h2>
+
+                                    <div className="aba-face">
+                                        <h2 onClick={(e) => setfilteOnline(false)} className={filteOnline === false ? "face check" : "face"}></h2>
+                                        <h2 onClick={(e) => setfilteOnline(true)} className={filteOnline === false ? "online" : "online check"}></h2>
+                                    </div>
+
                                 </div>
 
                             </div>
 
                             <div className="btn-flutuante">
-                                <button className="bnt-action" onClick={()=> handleBtn("nativo")}>Nativos</button>
+                                <button className="bnt-action" onClick={() => handleBtn("nativo")}>Nativos</button>
                                 <div className={btnAction.nativo === false ? "div-flutuante" : "div-flutuante aberto"}>
-                                    <h2>Nativos</h2>
-                                    <button></button>
+
+                                    <div className="aba-nativo">
+
+                                        <div className="form-check form-switch">
+                                            <label className="form-check-label" for="flexSwitchCheckDefault">Ver somente professores nativos</label>
+                                            <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" />
+                                        </div>
+
+                                        <button className="btn btn-outline-primary">confirmar</button>
+                                    </div>
+
+
                                 </div>
 
                             </div>
 
                             <div className="btn-flutuante">
-                                <button className="bnt-action" onClick={()=> handleBtn("precos")}>precos</button>
+                                <button className="bnt-action" onClick={() => handleBtn("precos")}>precos</button>
                                 <div className={btnAction.precos === false ? "div-flutuante" : "div-flutuante aberto"}>
-                                    <h2>precos</h2>
-                                    <button></button>
+
+                                    <div className="aba-preco">
+                                        <p>precos medio R${valorHora},00</p>
+                                        <h5>seu orçamento R${valorMedio}</h5>
+                                        <input type="range" class="form-range" id="customRange1"></input>
+                                        <div className="form-check form-switch">
+                                            <label className="form-check-label" for="flexSwitchCheckDefault">Ver somente professores nativos</label>
+                                            <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" />
+                                        </div>
+
+                                    </div>
+
                                 </div>
 
                             </div>
 
                             <div className="btn-flutuante">
-                                <button className="bnt-action" onClick={()=> handleBtn("tempresp")}>tempo de resposta</button>
+                                <button className="bnt-action" onClick={() => handleBtn("tempresp")}>tempo de resposta</button>
                                 <div className={btnAction.tempresp === false ? "div-flutuante" : "div-flutuante aberto"}>
                                     <h2>tempo de resposta</h2>
                                     <button></button>
@@ -69,7 +104,7 @@ const handleBtn= (btn) =>{
                             </div>
 
                             <div className="btn-flutuante">
-                                <button className="bnt-action" onClick={()=> handleBtn("nivel")}>nivel</button>
+                                <button className="bnt-action" onClick={() => handleBtn("nivel")}>nivel</button>
                                 <div className={btnAction.nivel === false ? "div-flutuante" : "div-flutuante aberto"}>
                                     <h2>nivel</h2>
                                     <button></button>
@@ -79,7 +114,7 @@ const handleBtn= (btn) =>{
 
                         </div>
 
-                        
+
 
                     </div>
 
