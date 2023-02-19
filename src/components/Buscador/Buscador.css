@@ -1,0 +1,63 @@
+.caixaBuscador{
+    max-width: 1600px;
+    width: 80%;
+    display: grid;
+    box-shadow: 0 5px 20px 0 rgb(34 34 32 / 20%) ;
+    margin: 0 auto ;
+    padding: 10px;
+    grid-template-columns: 3fr 3fr 1fr;
+    margin-top: 80px;
+    border-radius: 5px;
+}
+
+
+
+.localProf input, .nomeProf input{
+    width: 100%;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    outline: none;
+    padding: 10px;
+   
+
+}
+
+.nomeProf input{
+        border-right: 2px solid #CCC;
+        
+}
+
+.nomeProf :after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    left: 30px;
+    width: 20px;
+    height: 20px;
+    /* background-image: url(./../images/search_bar/search.svg); */
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-background-size: contain;
+    background-size: contain;
+}
+
+.btnEnviaProf{
+    border-radius: 10px;
+    background-color: #ff6363;
+    border: none;
+    padding: 16px 0px;
+    color: white;
+    font-weight: bold;
+
+
+
+}
+
+
+
+
