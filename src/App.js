@@ -5,6 +5,11 @@ import Home from "./pages/Home";
 function App() {
   return (
     <>
+    
+
+    <div className="container">
+
+
     <Navbar/>
     <BrowserRouter>
       <Routes>
@@ -12,6 +17,14 @@ function App() {
         {/* <Route path="/teste" element={<h1>teste</h1>}/> */}
       </Routes>
     </BrowserRouter>
+   
+
+    </div>
+
+
+
+
+    
 
     </>
   );

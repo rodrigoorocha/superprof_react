@@ -1,3 +1,29 @@
+// import axios from 'axios';
+
+// const submitApi = async (url, method, data) => {
+//   try {
+//     const response = await axios({
+//       method: method,
+//       url: `http://localhost:3001/${url}`,
+//       headers: {
+//         'Content-Type': 'application/json'
+//       },
+//       data: data
+//     });
+
+//     if (response.data?.error) {
+//       throw new Error(response.data.error);
+//     }
+
+//     return response.data;
+//   } catch (error) {
+//     throw new Error(error.message);
+//   }
+// };
+
+// export default submitApi;
+
+
 const submitApi = (url, method, data) => {
 
     const options = {

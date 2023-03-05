@@ -1,6 +1,6 @@
 .caixaBuscador{
     max-width: 1600px;
-    width: 80%;
+    width: 100%;
     display: grid;
     box-shadow: 0 5px 20px 0 rgb(34 34 32 / 20%) ;
     margin: 0 auto ;
@@ -22,29 +22,34 @@
    
 
 }
+.nomeProf{
+    position: relative;
+}
 
 .nomeProf input{
         border-right: 2px solid #CCC;
+        padding-left: 30px;
         
 }
 
-.nomeProf :after {
-    content: "";
-    position: absolute;
-    display: block;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-    left: 30px;
-    width: 20px;
-    height: 20px;
-    /* background-image: url(./../images/search_bar/search.svg); */
-    background-position: center;
+.nomeProf::before{
+    content: '';
+    background-image: url('https://c.superprof.com/style/images/search_bar/search.svg');
     background-repeat: no-repeat;
-    -webkit-background-size: contain;
     background-size: contain;
+    display: inline-block;
+    width: 20px;
+    height: 18px;
+    margin-right: 10px;
+    margin-left: 10px;
+    position: relative;
+    top: 15px;
+    left: -9px;
+    position: absolute;
+   
 }
+
+
 
 .btnEnviaProf{
     border-radius: 10px;
